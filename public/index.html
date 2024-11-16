@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sprint Meeting Fun</title>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="western-theme">
+  <div class="container">
+    <div class="card p-4">
+      <h1 class="text-center mb-5">Scrumble Roulette</h1>
+      <div id="role-selection" class="text-center mb-5">
+        <button class="btn btn-primary mr-2" id="scrummaster">Scrum Master</button>
+        <button class="btn btn-primary" id="developer">Developer</button>
+      </div>
+      <div id="sprint-meeting" class="mt-5" style="display:none;">
+        <div id="scrummaster-ui" style="display:none;">
+          <h2 class="text-center mb-4">Scrum Master</h2>
+          <button class="btn btn-warning mb-3" id="roulette">Roulette</button>
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="question" placeholder="Enter your question">
+            <div class="input-group-append d-flex justify-content-center">
+              <button class="btn btn-outline-secondary" id="send-question">Send Question</button>
+            </div>
+          </div>
+          <div id="answers">
+            <h3 class="mb-3">Answers: (drag and drop to set the order)</h3>
+            <ul id="answer-list" class="list-group mb-3"></ul>
+          </div>
+          <button class="btn btn-success" id="set-order">Set Order</button>
+        </div>
+        <div id="developer-ui" style="display:none;">
+          <h2 class="text-center mb-4">Developer</h2>
+          <button class="btn btn-danger" id="scum-safe" style="display: none;">Scrum or Safe</button>
+          <div id="status-alert" class="mt-3" style="display: none;">
+              <div class="alert" role="alert"></div>
+            </div>
+            
+
+          <div class="input-group mb-3">
+            <input type="text" class="form-control" id="developer-name" placeholder="Enter your name">
+          </div>
+          <div id="question-display" class="mb-3">
+            <h3>Question:</h3>
+            <p id="question-text"></p>
+        </div>
+        <div class="input-group mb-3">
+          <input type="text" class="form-control" id="answer" placeholder="Enter your answer">
+          <div class="input-group-append d-flex justify-content-center">
+            <button class="btn btn-outline-secondary" id="send-answer">Send Answer</button>
+          </div>
+        </div>
+      </div>
+      <div id="order-display" style="display:none;">
+        <h3 class="mb-3">Speaking Order:</h3>
+        <ol id="order-list"></ol>
+      </div>
+    </div>
+  </div>
+</div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+<script src="https://randojs.com/1.0.0.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/sortablejs@1.14.0/Sortable.min.js"></script>
+<script src="/socket.io/socket.io.js"></script>
+<script src="js/main.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>

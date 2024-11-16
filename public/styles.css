@@ -1,0 +1,130 @@
+/* Common styles */
+body {
+    font-family: 'Arial', sans-serif;
+  }
+  
+  h1 {
+    font-size: 2.5rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.5rem;
+  }
+  
+  #answer-list,
+  #order-list {
+    max-height: 300px;
+    overflow-y: auto;
+  }
+  
+  .list-group-item {
+    cursor: grab;
+  }
+  
+  .btn,
+  h1,
+  h2,
+  h3 {
+    transition: all 0.3s ease;
+  }
+  
+  /* Roulette theme */
+  .roulette-theme {
+    background: radial-gradient(circle at center center, #17011b, #ff0000);
+    color: #fff;
+  }
+  .roulette-theme h1,
+  .roulette-theme h2,
+  .roulette-theme h3,
+  .roulette-theme .btn {
+    color: #fff;
+  }
+  
+  .roulette-theme .btn {
+    border-color: #fff;
+  }
+  
+  /* Western theme */
+  .western-theme {
+    background-color: #1c1e29;
+    font-family: 'ff-din-web', sans-serif;
+    color: #fff;
+  }
+  
+  .western-theme h1,
+  .western-theme h2,
+  .western-theme h3,
+  .western-theme .btn {
+    color: #fff;
+  }
+  
+  .western-theme .btn {
+    border-color: #fff;
+  }
+  
+  /* Card */
+  .card {
+    background-color: #272934;
+    padding: 2rem;
+    margin: 2rem 0;
+    border-radius: 5px;
+  }
+  
+  /* Theme switcher */
+  .theme-switch-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 1rem;
+  }
+  
+  .theme-switch {
+    position: relative;
+    display: inline-block;
+    width: 60px;
+    height: 34px;
+  }
+  
+  .theme-switch input {
+    opacity: 0;
+    width: 0;
+    height: 0;
+  }
+  
+  .slider {
+    position: absolute;
+    cursor: pointer;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: #ccc;
+    transition: 0.4s;
+    border-radius: 34px;
+  }
+  
+  .slider:before {
+    position: absolute;
+    content: "";
+    height: 26px;
+    width: 26px;
+    left: 4px;
+    bottom: 4px;
+    background-color: white;
+    transition: 0.4s;
+    border-radius: 50%;
+  }
+  
+  input:checked + .slider {
+    background-color: #2196f3;
+  }
+  
+  input:checked + .slider:before {
+    transform: translateX(26px);
+  }
+  
+  
